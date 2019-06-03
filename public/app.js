@@ -28,6 +28,7 @@ $(document).on("click", "p", function () {
             $("#notes").append("<button data-id='" + data._id + "' id='savenote'>Save Note</button>");
 
             if (data.note) {
+                console.log(data.note)
 
                 $("#titleinput").val(data.note.title);
 
@@ -47,6 +48,7 @@ $(document).on("click", "#savenote", function () {
             title: $("#titleinput").val(),
 
             body: $("#bodyinput").val()
+
         }
     })
         .then(function (data) {
